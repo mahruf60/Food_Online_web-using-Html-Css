@@ -1,26 +1,126 @@
 /* CSS Reset  */
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
 /* CSS Variables */
-:root{
+:root {
     --navbar-height: 59px
 }
 
 /* Navigation Bar */
-#navbar{
+#navbar {
     display: flex;
     align-items: center;
+    position: relative;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    z-index: -1;
+    opacity: 0.4;
 }
 
 /* Navigation Bar: logo & image */
-#logo{
-  margin: 34px 45px;
-}
-#logo img{
+#logo {
+    margin: 34px 45px;
 
+}
+
+#logo img {
+    height: 56px;
+    width: 56px;
+    margin: -3px -13px;
 }
 
 /* Navigation Bar: List styling */
+
+#navbar ul{
+    display: flex;
+    font-family: "Rubik", sans-serif;
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 5px 23px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+#navbar ul li a:hover {
+    color: black;
+    background-color: white;
+}
+
+/* Home section */
+#home{
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    padding: 3px 100px;
+    justify-content: center;
+    align-items: center;
+}
+#home::before{
+    content: "";
+    background:url(../bg.jpg) ;
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    z-index: -1;
+    opacity: 0.88;
+}
+#home h1{
+    color: white;
+    text-align: center;
+    font-family: "Rubik", sans-serif;
+}
+#home p{
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    font-family: "Rubik", sans-serif;
+}
+/* Services Secton  */
+#services{
+    margin: 30px;
+    display: flex;
+}
+#services .box{
+    border: 2px solid rgb(221, 255, 0);
+}
+#services .box img{
+    height: 100px;
+}
+
+/* Utility classes */
+.h-primary{
+    font-size: 2.5rem;
+    padding: 10px;
+}
+.h-secondary{
+    font-size: 2rem;
+    padding: 10px;
+}
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.center{
+    text-align: center;
+}
+
