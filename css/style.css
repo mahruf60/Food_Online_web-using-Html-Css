@@ -14,13 +14,16 @@
     display: flex;
     align-items: center;
     position: relative;
+    top: -17px;
 }
 #navbar::before{
     content: "";
     background-color: black;
     position: absolute;
     width: 120%;
-    height: 120%;
+    top: 0px;
+    left: 0px;
+    height: 78%;
     z-index: -1;
     opacity: 0.4;
 }
@@ -32,9 +35,9 @@
 }
 
 #logo img {
-    height: 56px;
-    width: 56px;
-    margin: -3px -13px;
+    height: 44px;
+    width: 53px;
+    margin: -6px -10px;
 }
 
 /* Navigation Bar: List styling */
@@ -46,7 +49,7 @@
 
 #navbar ul li{
     list-style: none;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 #navbar ul li a{
     color: white;
@@ -64,17 +67,18 @@
 #home{
     display: flex;
     flex-direction: column;
-    height: 200px;
-    padding: 3px 100px;
+    height: 400px;
+    padding: -1px 70px;
+    margin: -21px;
     justify-content: center;
     align-items: center;
 }
 #home::before{
     content: "";
-    background:url(../bg.jpg) ;
+    background:url(../bg1.jpg) no-repeat center center/cover ;
     position: absolute;
-    width: 120%;
-    height: 120%;
+    width: 100%;
+    height: 642px;
     z-index: -1;
     opacity: 0.88;
 }
@@ -96,19 +100,57 @@
 }
 #services .box{
     border: 2px solid rgb(221, 255, 0);
+    padding: -62px 34px;
+    margin: 72px 6px;
+    border-radius: 25px;
+    background: rgb(254 240 240);
 }
 #services .box img{
-    height: 100px;
+    height: 160px;
+    margin: auto;
+    display: block;
+}
+#services .box p{
+    font-family: "Rubik", sans-serif;
+}
+
+/* Client section  */
+#client-section{
+   height: 344px;
+   position: relative;
+}
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url('../bg.jpg');
+    height: 80%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.client-item{
+    padding: 30px;
+}
+#clients img{
+    height: 80px;
 }
 
 /* Utility classes */
 .h-primary{
     font-size: 2.5rem;
-    padding: 10px;
+    padding: 3px 10px;
+    margin:-4px 50px;
+    font-family: "Rubik", sans-serif;
 }
 .h-secondary{
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 10px;
+    font-family: "Rubik", sans-serif;
 }
 .btn{
     padding: 6px 20px;
